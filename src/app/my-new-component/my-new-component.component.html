@@ -1,0 +1,10 @@
+<p>
+ Contact Tree
+</p>
+
+  <ul>
+      <li *ngFor="let node of data" (click)= "doToggle(node.id);" >
+          <div>{{node.name}}</div>
+        <app-tree-node [toggle]="clickedObj==node.id" [data]="node"></app-tree-node>
+      </li>
+    </ul>

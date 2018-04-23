@@ -1,0 +1,6 @@
+<ul *ngIf="toggle">
+  <li *ngFor="let node of data.contacts" (click)= "doToggle(node.id);" >
+      <div>{{node.name}}</div>
+    <app-tree-node  [toggle]="flag && clickedObj==node.id" [data]="node" ></app-tree-node> 
+  </li>
+</ul>
